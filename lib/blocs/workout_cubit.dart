@@ -8,6 +8,9 @@ class WorkoutCubit extends Cubit<List<WorkoutModel>> {
   WorkoutCubit() : super([]);
 
   getWorkout() async {
+    await Future.delayed(
+      const Duration(seconds: 2),
+    );
     final workoutListJson = jsonDecode(
       await rootBundle.loadString("assets/workouts.json"),
     );
